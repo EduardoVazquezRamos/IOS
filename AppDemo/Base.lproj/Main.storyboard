@@ -105,29 +105,134 @@
                             <constraint firstItem="bBH-WV-gah" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="uJy-tg-hf7"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="5e9-nM-qN6"/>
+                    <navigationItem key="navigationItem" id="5e9-nM-qN6">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="xfo-wl-o2l">
+                            <connections>
+                                <action selector="btnAgregar_Click:" destination="BYZ-38-t0r" id="CRd-8N-LwN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tblTabla" destination="bBH-WV-gah" id="KZY-sZ-A88"/>
+                        <segue destination="mMv-4Y-jta" kind="show" identifier="Detalle Segue" id="gkJ-XC-PlA"/>
+                        <segue destination="3gO-ef-qrL" kind="show" identifier="Agregar Segue" id="dqA-qg-g7V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-400.00000000000006" y="10.597826086956523"/>
+            <point key="canvasLocation" x="-294" y="-2"/>
         </scene>
-        <!--View Controller-->
+        <!--Detalle View Controller-->
         <scene sceneID="mgl-In-paK">
             <objects>
-                <viewController id="mMv-4Y-jta" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetalleViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mMv-4Y-jta" customClass="DetalleViewController" customModule="AppDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="q4i-Gx-iAi"/>
                         <viewControllerLayoutGuide type="bottom" id="hTZ-6d-7kk"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Vot-Ya-KaU">
+                    <view key="view" contentMode="scaleToFill" id="Vot-Ya-KaU" customClass="FilaTableViewCell" customModule="AppDemo" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vxM-jb-asQ">
+                                <rect key="frame" x="186.33333333333337" y="358" width="41.666666666666657" height="20.333333333333314"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="BCd-K9-X0K">
+                                        <rect key="frame" x="0.0" y="0.0" width="41.666666666666657" height="20.333333333333314"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eq9-e0-lFg">
+                                                <rect key="frame" x="0.0" y="0.0" width="41.666666666666657" height="20.333333333333314"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="Eq9-e0-lFg" secondAttribute="bottom" id="4Ob-zp-sQt"/>
+                                            <constraint firstItem="Eq9-e0-lFg" firstAttribute="leading" secondItem="BCd-K9-X0K" secondAttribute="leading" id="ITH-GR-Wj0"/>
+                                            <constraint firstAttribute="trailing" secondItem="Eq9-e0-lFg" secondAttribute="trailing" id="lDI-ve-udb"/>
+                                            <constraint firstItem="Eq9-e0-lFg" firstAttribute="top" secondItem="BCd-K9-X0K" secondAttribute="top" id="zUZ-m2-ohV"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vxM-jb-asQ" firstAttribute="centerX" secondItem="Vot-Ya-KaU" secondAttribute="centerX" id="5Mu-VF-FZ2"/>
+                            <constraint firstItem="vxM-jb-asQ" firstAttribute="centerY" secondItem="Vot-Ya-KaU" secondAttribute="centerY" id="g0D-p2-3Q4"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="lblNombre" destination="Eq9-e0-lFg" id="R2t-nV-c1J"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HNf-6j-ngZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="368" y="-2"/>
+            <point key="canvasLocation" x="619" y="526"/>
+        </scene>
+        <!--Agregar View Controller-->
+        <scene sceneID="t3I-07-f6P">
+            <objects>
+                <viewController id="3gO-ef-qrL" customClass="AgregarViewController" customModule="AppDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yfJ-pt-g4C"/>
+                        <viewControllerLayoutGuide type="bottom" id="eIs-Gg-E43"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="son-qA-9mN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tHT-Mh-h4O">
+                                <rect key="frame" x="66" y="148" width="282" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dle-9B-9Vm">
+                                <rect key="frame" x="184" y="353" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="btnGuardar_Click:" destination="3gO-ef-qrL" eventType="touchUpInside" id="LIf-64-Vf8"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lhq-br-nqJ">
+                                <rect key="frame" x="176" y="119" width="61.666666666666664" height="20.333333333333332"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Edad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WwC-lt-of1">
+                                <rect key="frame" x="183" y="222" width="39" height="20.333333333333343"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d5R-Rd-Uiz">
+                                <rect key="frame" x="69" y="250" width="274" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dle-9B-9Vm" firstAttribute="centerY" secondItem="son-qA-9mN" secondAttribute="centerY" id="bLy-Za-vuJ"/>
+                            <constraint firstItem="dle-9B-9Vm" firstAttribute="centerX" secondItem="son-qA-9mN" secondAttribute="centerX" id="lBw-Pj-eCo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="txbNombre" destination="tHT-Mh-h4O" id="r9N-VM-L9L"/>
+                        <outlet property="txbNumero" destination="d5R-Rd-Uiz" id="Pll-rP-PIt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NwI-yM-JeR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="471.01449275362324" y="-148.36956521739131"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CXo-gM-8Xy">

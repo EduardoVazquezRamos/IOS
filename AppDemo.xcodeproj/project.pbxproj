@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08C0E0931DF71AB3005064A3 /* DetalleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C0E0921DF71AB3005064A3 /* DetalleViewController.swift */; };
+		08C0E0951DF73A55005064A3 /* AgregarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08C0E0941DF73A55005064A3 /* AgregarViewController.swift */; };
 		08F5C2E41DF5D7EB002319DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F5C2E31DF5D7EB002319DC /* AppDelegate.swift */; };
 		08F5C2E61DF5D7EB002319DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F5C2E51DF5D7EB002319DC /* ViewController.swift */; };
 		08F5C2E91DF5D7EB002319DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08F5C2E71DF5D7EB002319DC /* Main.storyboard */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		08C0E0921DF71AB3005064A3 /* DetalleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetalleViewController.swift; sourceTree = "<group>"; };
+		08C0E0941DF73A55005064A3 /* AgregarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgregarViewController.swift; sourceTree = "<group>"; };
 		08F5C2E01DF5D7EB002319DC /* AppDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08F5C2E31DF5D7EB002319DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08F5C2E51DF5D7EB002319DC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +67,8 @@
 				08F5C2EC1DF5D7EB002319DC /* LaunchScreen.storyboard */,
 				08F5C2EF1DF5D7EB002319DC /* Info.plist */,
 				08F5C2F51DF5F6FE002319DC /* FilaTableViewCell.swift */,
+				08C0E0921DF71AB3005064A3 /* DetalleViewController.swift */,
+				08C0E0941DF73A55005064A3 /* AgregarViewController.swift */,
 			);
 			path = AppDemo;
 			sourceTree = "<group>";
@@ -139,9 +145,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08C0E0931DF71AB3005064A3 /* DetalleViewController.swift in Sources */,
 				08F5C2E61DF5D7EB002319DC /* ViewController.swift in Sources */,
 				08F5C2E41DF5D7EB002319DC /* AppDelegate.swift in Sources */,
 				08F5C2F61DF5F6FE002319DC /* FilaTableViewCell.swift in Sources */,
+				08C0E0951DF73A55005064A3 /* AgregarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +311,7 @@
 				08F5C2F41DF5D7EB002319DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
