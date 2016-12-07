@@ -7,10 +7,20 @@
 //
 
 import UIKit
+import FBSDKLoginKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, DetalleViewControllerDelegate, AgregarViewControllerDelegate {
     
+    @IBOutlet weak var imgFoto: UIImageView!
+  
+    @IBAction func btnRefresh(_ sender: Any) {
+        let idFacebook = FBSDKAccessToken.current().userID
+        let cadeUrl = "http://graph.facebook.com/\(idFacebook!)/picture?type=large"
+        imgFoto.loadPicture(url: cadeUrl)
+    }
     
+    
+    @IBOutlet weak var lblNombreFb: UILabel!
     @IBAction func btnAgregar_Click(_ sender: Any) {
         performSegue(withIdentifier: "Agregar Segue", sender: self)
     }
@@ -24,6 +34,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         print("Vista cargada")
+        imgFoto.image = UIImage(named: "Praise")
+        lblNombreFb.text = "Praise"
+        
         
         
     }

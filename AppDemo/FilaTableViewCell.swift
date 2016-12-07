@@ -10,6 +10,7 @@ import UIKit
 
 class FilaTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var imgNueva: UIImageView!
     @IBOutlet weak var lblIzquierda: UILabel!
     @IBOutlet weak var lblDerecha: UILabel!
     
